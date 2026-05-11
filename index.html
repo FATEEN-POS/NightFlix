@@ -1,125 +1,222 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Night Flix</title>
-
-    <!-- CSS -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NightFlix</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <!-- 🔥 HEADER -->
-    <header>
-        <h1>Night Flix</h1>
+<!-- OVERLAY -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeAll()"></div>
 
-        <nav>
-            <ul>
-                <li><a href="#">الرئيسية</a></li>
-                <li><a href="#">أفلام</a></li>
-                <li><a href="#">مسلسلات</a></li>
-                <li><a href="#">تواصل معنا</a></li>
-            </ul>
-        </nav>
-
-        <!-- 🔍 SEARCH -->
-        <input type="text" id="searchInput" placeholder="ابحث عن فيلم...">
-    </header>
-
-    <!-- 🧩 CONTAINER -->
-    <div class="container">
-
-        <!-- 📂 SIDEBAR -->
-        <aside class="sidebar">
-
-            <h2>🔥 الأقسام</h2>
-
-            <ul>
-                <li><a href="#" onclick="filterMovies('all')">🎬 الكل</a></li>
-                <li><a href="#" onclick="filterMovies('action')">💥 أكشن</a></li>
-                <li><a href="#" onclick="filterMovies('comedy')">😂 كوميدي</a></li>
-                <li><a href="#" onclick="filterMovies('drama')">💔 دراما</a></li>
-            </ul>
-
-        </aside>
-
-        <!-- 🎥 MOVIES -->
-        <div class="movies" id="moviesContainer">
-
-           <div class="movie" data-category="action">
-    <img src="https://image.tmdb.org/t/p/original/uLhlqWVJhjz8xU1tZp02YkixWGR.jpg">
-    <h3>Extraction</h3>
+<!-- CONTACT MODAL -->
+<div class="contact-modal" id="contactModal">
+  <div class="contact-header">
+    <button class="contact-close" onclick="closeContact()">✕</button>
+    <h2>تواصل معنا</h2>
+    <p>Fateen Digital Solutions</p>
+  </div>
+  <div class="contact-links">
+    <a class="contact-link" href="https://wa.me/201000000000" target="_blank">
+      <div class="contact-link-left">
+        <div class="contact-icon wa">💬</div>
+        <div><div>WhatsApp</div><div class="contact-label">رد فوري — Instant Reply</div></div>
+      </div>
+      <span style="color:#555;font-size:18px">›</span>
+    </a>
+    <a class="contact-link" href="mailto:info@nightflix.com" target="_blank">
+      <div class="contact-link-left">
+        <div class="contact-icon em">✉️</div>
+        <div><div>البريد الإلكتروني</div><div class="contact-label">Email Us</div></div>
+      </div>
+      <span style="color:#555;font-size:18px">›</span>
+    </a>
+    <a class="contact-link" href="https://facebook.com" target="_blank">
+      <div class="contact-link-left">
+        <div class="contact-icon fb">f</div>
+        <div><div>Facebook</div><div class="contact-label">صفحتنا الرسمية</div></div>
+      </div>
+      <span style="color:#555;font-size:18px">›</span>
+    </a>
+    <a class="contact-link" href="https://instagram.com" target="_blank">
+      <div class="contact-link-left">
+        <div class="contact-icon ig">📸</div>
+        <div><div>Instagram</div><div class="contact-label">تابعنا</div></div>
+      </div>
+      <span style="color:#555;font-size:18px">›</span>
+    </a>
+    <a class="contact-link" href="https://t.me/nightflix" target="_blank">
+      <div class="contact-link-left">
+        <div class="contact-icon tg">✈️</div>
+        <div><div>Telegram</div><div class="contact-label">قناة النايت فليكس</div></div>
+      </div>
+      <span style="color:#555;font-size:18px">›</span>
+    </a>
+  </div>
 </div>
 
-<div class="movie" data-category="action">
-    <img src="https://th.bing.com/th/id/OIP.07ApoNsHUiD_LaKtezPdmAHaLH?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3">
-    <h3>Avengers Endgame</h3>
-</div>
-
-<div class="movie" data-category="action">
-    <img src="https://tse3.mm.bing.net/th/id/OIP.uNQea1Fb1qjTi-u3OiegWQHaK-?pid=ImgDet&w=474&h=702&rs=1&o=7&rm=3">
-    <h3>The Batman</h3>
-</div>
-
-<div class="movie" data-category="drama">
-    <img src="https://vignette.wikia.nocookie.net/elite-netflix/images/2/2c/Season_1_Poster.jpg/revision/latest?cb=20190816175812">
-    <h3>Elite</h3>
-</div>
-
-<div class="movie" data-category="drama">
-    <img src="https://tse2.mm.bing.net/th/id/OIP.D4d76RNSVVnHQEWxGpBFYwHaJ4?rs=1&pid=ImgDetMain&o=7&rm=3">
-    <h3>Money Heist</h3>
-</div>
-
-<div class="movie" data-category="drama">
-    <img src="images/breakingbad.jpg">
-    <h3>Breaking Bad</h3>
-</div>
-
-<div class="movie" data-category="action">
-    <img src="images/rambo.jpg">
-    <h3>Rambo</h3>
-</div>
-
-<div class="movie" data-category="action">
-    <img src="images/rocky.jpg">
-    <h3>Rocky</h3>
-</div>
-
-<div class="movie" data-category="action">
-    <img src="images/300.jpg">
-    <h3>300</h3>
-</div>
-
-<div class="movie" data-category="action">
-    <img src="images/kingsman.jpg">
-    <h3>Kingsman</h3>
-</div>
-
-<div class="movie" data-category="action">
-    <img src="images/nobody.jpg">
-    <h3>Nobody</h3>
-</div>
-            <!-- فيلم 4 -->
-            <div class="movie" data-category="action">
-                <img src="images/johnwick.jpg" alt="John Wick">
-                <h3>John Wick</h3>
-            </div>
-
+<!-- MOVIE MODAL -->
+<div class="movie-modal" id="movieModal">
+  <button class="modal-close" onclick="closeModal()">✕</button>
+  <div class="modal-hero">
+    <img id="modalHeroImg" class="modal-hero-img" src="" alt="">
+    <div class="modal-hero-grad"></div>
+    <div class="modal-hero-content">
+      <div class="modal-poster-small"><img id="modalPoster" src="" alt=""></div>
+      <div class="modal-hero-info">
+        <div class="modal-genre-tag" id="modalGenre"></div>
+        <h1 class="modal-title" id="modalTitle"></h1>
+        <p class="modal-title-ar" id="modalTitleAr"></p>
+        <div class="modal-badges">
+          <span class="modal-star">⭐ <span id="modalRating"></span></span>
+          <span class="modal-meta-badge" id="modalYear"></span>
+          <span class="modal-meta-badge" id="modalDuration"></span>
+          <span class="modal-meta-badge" id="modalCountry"></span>
         </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-body">
+    <p class="modal-desc" id="modalDesc"></p>
+    <div class="modal-details">
+      <div class="modal-detail-item">
+        <h4>الممثلون</h4>
+        <p id="modalCast"></p>
+      </div>
+      <div class="modal-detail-item">
+        <h4>المخرج</h4>
+        <p id="modalDirector"></p>
+      </div>
+    </div>
+    <div class="modal-actions">
+      <button class="btn-watch" id="watchBtn" onclick="openVideoPlayer()">▶ شاهد الآن</button>
+      <button class="btn-close-modal" onclick="closeModal()">✕ إغلاق</button>
+    </div>
+  </div>
+</div>
 
+<!-- VIDEO PLAYER MODAL -->
+<div class="video-modal" id="videoModal">
+  <div class="video-header">
+    <h3 id="videoTitle">جاري التشغيل...</h3>
+    <button class="video-close" onclick="closeVideo()">✕</button>
+  </div>
+  <div class="video-player-wrap">
+    <div class="video-unavailable" id="videoUnavailable">
+      <div class="icon">🎬</div>
+      <p>الفيلم متاح على المنصة الرسمية</p>
+      <a id="externalLink" href="#" target="_blank">شاهد على المنصة ›</a>
+    </div>
+    <iframe id="videoIframe" style="display:none" allowfullscreen allow="autoplay"></iframe>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <div class="logo" onclick="filterMovies('all')">NightFlix</div>
+    <nav>
+      <ul>
+        <li><a href="#" onclick="filterMovies('all')" class="active" id="navAll">الرئيسية</a></li>
+        <li><a href="#" onclick="filterMovies('action')" id="navAction">أكشن</a></li>
+        <li><a href="#" onclick="filterMovies('drama')" id="navDrama">دراما</a></li>
+        <li><a href="#" onclick="filterMovies('comedy')" id="navComedy">كوميدي</a></li>
+        <li><a href="#" onclick="filterMovies('scifi')" id="navScifi">خيال علمي</a></li>
+        <li><a href="#" onclick="filterMovies('horror')" id="navHorror">رعب</a></li>
+        <li><a href="#" onclick="filterMovies('crime')" id="navCrime">جريمة</a></li>
+        <li><a href="#" onclick="filterMovies('animation')" id="navAnim">أنيميشن</a></li>
+        <li><a href="#" onclick="filterMovies('thriller')" id="navThrill">إثارة</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <div class="search-wrap">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="searchInput" placeholder="ابحث...">
+      </div>
+      <button class="btn-contact" onclick="openContact()">تواصل معنا</button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero" id="heroSection">
+  <div class="hero-bg"></div>
+  <div class="hero-noise"></div>
+  <div class="hero-gradient"></div>
+  <div class="hero-content">
+    <div class="hero-tag">🔥 الأكثر مشاهدة</div>
+    <h1 class="hero-title" id="heroTitle">Breaking Bad</h1>
+    <p class="hero-title-ar" id="heroTitleAr">كسر القواعد</p>
+    <p class="hero-desc" id="heroDesc">معلم كيمياء مصاب بالسرطان يتحول إلى أخطر تاجر مخدرات في أمريكا. أعظم مسلسل أمريكي في تاريخ التلفزيون.</p>
+    <div class="hero-actions">
+      <button class="btn-play" id="heroPlayBtn">▶ شاهد الآن</button>
+      <button class="btn-more" id="heroInfoBtn">ℹ تفاصيل أكثر</button>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div class="layout">
+  <main class="main-content">
+    <!-- CATEGORY TABS -->
+    <div class="cat-tabs" id="catTabs">
+      <button class="cat-tab active" onclick="filterMovies('all')">🎬 الكل</button>
+      <button class="cat-tab" onclick="filterMovies('action')">💥 أكشن</button>
+      <button class="cat-tab" onclick="filterMovies('drama')">💔 دراما</button>
+      <button class="cat-tab" onclick="filterMovies('comedy')">😂 كوميدي</button>
+      <button class="cat-tab" onclick="filterMovies('scifi')">🚀 خيال علمي</button>
+      <button class="cat-tab" onclick="filterMovies('horror')">👻 رعب</button>
+      <button class="cat-tab" onclick="filterMovies('crime')">🔫 جريمة</button>
+      <button class="cat-tab" onclick="filterMovies('animation')">🎨 أنيميشن</button>
+      <button class="cat-tab" onclick="filterMovies('thriller')">😱 إثارة</button>
+      <button class="cat-tab" onclick="filterMovies('romance')">❤️ رومانسي</button>
+      <button class="cat-tab" onclick="filterMovies('biography')">📖 سيرة ذاتية</button>
     </div>
 
-    <!-- 🟨 FOOTER -->
-    <footer>
-        <p>© 2026 جميع الحقوق محفوظة | الحاج مازن</p>
-    </footer>
+    <div class="section-header">
+      <h2 id="sectionTitle">🔥 الكل</h2>
+      <span class="movie-count" id="movieCount"></span>
+    </div>
+    <div class="movies" id="moviesContainer"></div>
+  </main>
+</div>
 
-    <!-- JavaScript -->
-    <script src="script.js"></script>
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="logo-f">NightFlix</div>
+      <p>منصتك العربية لمشاهدة أفضل الأفلام والمسلسلات العالمية</p>
+    </div>
+    <div class="footer-links">
+      <h4>تصفح</h4>
+      <ul>
+        <li><a href="#" onclick="filterMovies('all')">الرئيسية</a></li>
+        <li><a href="#" onclick="filterMovies('action')">أكشن</a></li>
+        <li><a href="#" onclick="filterMovies('drama')">دراما</a></li>
+        <li><a href="#" onclick="filterMovies('scifi')">خيال علمي</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>تواصل</h4>
+      <ul>
+        <li><a href="https://wa.me/201000000000" target="_blank">WhatsApp</a></li>
+        <li><a href="mailto:info@nightflix.com">البريد الإلكتروني</a></li>
+        <li><a href="https://t.me/nightflix" target="_blank">Telegram</a></li>
+        <li><a href="#" onclick="openContact()">جميع وسائل التواصل</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 NightFlix — جميع الحقوق محفوظة</p>
+    <p style="color:#333">Fateen Digital Solutions</p>
+  </div>
+</footer>
 
+<script src="script.js"></script>
 </body>
 </html>
