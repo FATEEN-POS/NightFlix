@@ -12,17 +12,6 @@ const movies = [
     cast:"Robert Downey Jr., Chris Evans, Scarlett Johansson",director:"Anthony & Joe Russo",
     watchUrl:"https://www.disneyplus.com/movies/avengers-endgame/aemchO4bMHvy",youtubeId:"TcMBFSGVi1c"},
 
-  {id:3,title:"The Batman",titleAr:"باتمان",category:"action",year:2022,duration:"2س 56د",country:"أمريكا",rating:"7.8",badge:"DC",badgeClass:"",
-    poster:"https://image.tmdb.org/t/p/w500/74xTpHRkEkqEXQ7pFJZKh3d8KSu.jpg",
-    desc:"في عامه الثاني كبطل، يواجه باتمان لغز قاتل متسلسل يستهدف النخبة الفاسدة في غوثام.",
-    cast:"Robert Pattinson, Zoë Kravitz, Paul Dano",director:"Matt Reeves",
-    watchUrl:"https://www.max.com",youtubeId:"mqqft2x_Aa4"},
-
-  {id:4,title:"Elite",titleAr:"النخبة",category:"drama",year:2018,duration:"مسلسل",country:"إسبانيا",rating:"7.4",badge:"Netflix",badgeClass:"green",
-    poster:"https://image.tmdb.org/t/p/w500/3RbHPRFkJpBh02VOfQZ0jMmtXKe.jpg",
-    desc:"ثلاثة طلاب من الطبقة العاملة يحصلون على منح دراسية في أرقى مدرسة خاصة في إسبانيا.",
-    cast:"Itzan Escamilla, Miguel Herrán, Danna Paola",director:"Carlos Montero",
-    watchUrl:"https://www.netflix.com/title/80200942",youtubeId:"E4NeQAy-pWA"},
 
   {id:5,title:"Money Heist",titleAr:"البروفيسور",category:"drama",year:2017,duration:"مسلسل",country:"إسبانيا",rating:"8.2",badge:"Netflix",badgeClass:"green",
     poster:"https://image.tmdb.org/t/p/w500/reEMJA1uzscCbkpeRJeTT2bjqUp.jpg",
@@ -48,11 +37,6 @@ const movies = [
     cast:"Matthew McConaughey, Anne Hathaway, Jessica Chastain",director:"Christopher Nolan",
     watchUrl:"https://www.netflix.com/title/70305903",youtubeId:"zSWdZVtXT7E"},
 
-  {id:9,title:"The Godfather",titleAr:"العراب",category:"crime",year:1972,duration:"2س 55د",country:"أمريكا",rating:"9.2",badge:"خالد",badgeClass:"gold",
-    poster:"https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsLegHnDmni09.jpg",
-    desc:"قصة عائلة كورليوني، أقوى عائلة مافيا في نيويورك. أسطورة السينما العالمية الأولى.",
-    cast:"Marlon Brando, Al Pacino, James Caan",director:"Francis Ford Coppola",
-    watchUrl:"https://www.amazon.com/gp/video/detail/B001GJ1C1W",youtubeId:"sY1S34973zA"},
 
   {id:10,title:"Joker",titleAr:"الجوكر",category:"crime",year:2019,duration:"2س 2د",country:"أمريكا",rating:"8.4",badge:"أوسكار",badgeClass:"gold",
     poster:"https://image.tmdb.org/t/p/w500/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg",
@@ -84,12 +68,7 @@ const movies = [
     cast:"Bradley Cooper, Zach Galifianakis, Ed Helms",director:"Todd Phillips",
     watchUrl:"https://www.max.com",youtubeId:"tcdUFgon_j4"},
 
-  {id:15,title:"Gladiator",titleAr:"المصارع",category:"action",year:2000,duration:"2س 35د",country:"أمريكا",rating:"8.5",badge:"أوسكار",badgeClass:"gold",
-    poster:"https://image.tmdb.org/t/p/w500/ty8TGRuvJLPUmAsCUCmX4FuXyVB.jpg",
-    desc:"جنرال روماني يتحول إلى مصارع يسعى للانتقام من الإمبراطور الخائن في ساحة الكولوسيوم.",
-    cast:"Russell Crowe, Joaquin Phoenix, Connie Nielsen",director:"Ridley Scott",
-    watchUrl:"https://www.amazon.com/gp/video/detail/B001FMRIAU",youtubeId:"owK1qxDselE"},
-
+ 
   {id:16,title:"Squid Game",titleAr:"لعبة الحبار",category:"drama",year:2021,duration:"مسلسل",country:"كوريا",rating:"8.0",badge:"Netflix",badgeClass:"green",
     poster:"https://image.tmdb.org/t/p/w500/dDlEmu3EZ0Pgg93K2SVNLCjCSvE.jpg",
     desc:"مئات المتعثرين مالياً يتنافسون في ألعاب أطفال قاتلة مقابل جائزة ضخمة.",
@@ -114,11 +93,7 @@ const movies = [
     cast:"Daveigh Chase, Suzanne Pleshette",director:"Hayao Miyazaki",
     watchUrl:"https://www.netflix.com",youtubeId:"ByXuk9QqQkk"},
 
-  {id:20,title:"Gone Girl",titleAr:"فتاة مختفية",category:"thriller",year:2014,duration:"2س 29د",country:"أمريكا",rating:"8.1",badge:"إثارة",badgeClass:"",
-    poster:"https://image.tmdb.org/t/p/w500/bNb03OadqsFbEADSsQ0LmkF30F8.jpg",
-    desc:"في ذكرى زواجه الخامس، تختفي زوجة رجل فجأة. تحقيق مثير يكشف أسراراً صادمة.",
-    cast:"Ben Affleck, Rosamund Pike, Neil Patrick Harris",director:"David Fincher",
-    watchUrl:"https://www.netflix.com",youtubeId:"V7DKbDVwr_c"},
+
 
   {id:21,title:"Titanic",titleAr:"تيتانيك",category:"romance",year:1997,duration:"3س 14د",country:"أمريكا",rating:"7.9",badge:"خالد",badgeClass:"gold",
     poster:"https://image.tmdb.org/t/p/w500/9xjZS2rlVxm8SFx8kPC3aIGCOYQ.jpg",
@@ -126,23 +101,12 @@ const movies = [
     cast:"Leonardo DiCaprio, Kate Winslet, Billy Zane",director:"James Cameron",
     watchUrl:"https://www.amazon.com",youtubeId:"kVrqfYjkTdQ"},
 
-  {id:22,title:"The Pursuit of Happyness",titleAr:"سعي الفرح",category:"biography",year:2006,duration:"1س 57د",country:"أمريكا",rating:"8.0",badge:"ملهم",badgeClass:"",
-    poster:"https://image.tmdb.org/t/p/w500/lBmwCpJgIBrDmCHmDqBJo9j0wAA.jpg",
-    desc:"رجل يصارع الفقر والضياع برفقة ابنه الصغير ساعياً نحو حلمه. قصة حقيقية ملهمة.",
-    cast:"Will Smith, Jaden Smith, Thandiwe Newton",director:"Gabriele Muccino",
-    watchUrl:"https://www.netflix.com",youtubeId:"DMOBlEMFnMo"},
 
   {id:23,title:"Oppenheimer",titleAr:"أوبنهايمر",category:"biography",year:2023,duration:"3س",country:"أمريكا",rating:"8.9",badge:"أوسكار",badgeClass:"gold",
     poster:"https://image.tmdb.org/t/p/w500/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg",
     desc:"السيرة الملحمية لأب القنبلة الذرية الذي غيّر مجرى التاريخ للأبد.",
     cast:"Cillian Murphy, Emily Blunt, Robert Downey Jr.",director:"Christopher Nolan",
     watchUrl:"https://www.amazon.com",youtubeId:"uYPbbksJxIg"},
-
-  {id:24,title:"It",titleAr:"إت",category:"horror",year:2017,duration:"2س 15د",country:"أمريكا",rating:"7.3",badge:"رعب",badgeClass:"",
-    poster:"https://image.tmdb.org/t/p/w500/9E2y5Q7WlCVNEhP5GkVhtHL4lQs.jpg",
-    desc:"مجموعة أطفال يواجهون مهرجاً مخيفاً يتغذى على الخوف في بلدة صغيرة.",
-    cast:"Jaeden Martell, Bill Skarsgård, Jeremy Ray Taylor",director:"Andy Muschietti",
-    watchUrl:"https://www.max.com",youtubeId:"FnCdOQsX5kc"},
 
   {id:25,title:"Scarface",titleAr:"وجه مشقوق",category:"crime",year:1983,duration:"2س 50د",country:"أمريكا",rating:"8.3",badge:"خالد",badgeClass:"gold",
     poster:"https://image.tmdb.org/t/p/w500/iQ5ztdjvteGeboxtmRdXEChJOHh.jpg",

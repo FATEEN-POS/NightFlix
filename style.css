@@ -81,11 +81,12 @@ nav a:hover,nav a.active{color:#fff;background:rgba(255,255,255,0.08)}
 }
 .hero-bg{
   position:absolute;inset:0;
-  background:linear-gradient(135deg,#0d0000 0%,#1a0000 50%,#0a0a0a 100%);
+  background:url('https://image.tmdb.org/t/p/original/tsRy63Mu5cu8etL1X7ZLyf7UP1M.jpg') center 20% / cover no-repeat;
 }
 .hero-bg::after{
   content:'';position:absolute;inset:0;
-  background:radial-gradient(ellipse at 30% 50%,rgba(229,9,20,0.15) 0%,transparent 60%);
+  background:linear-gradient(to right, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.55) 55%, rgba(0,0,0,0.15) 100%),
+             linear-gradient(to top, rgba(20,20,20,1) 0%, transparent 40%);
 }
 .hero-noise{
   position:absolute;inset:0;
