@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Night Flix</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- 🔥 HEADER -->
+    <header>
+        <h1>Night Flix</h1>
+
+        <nav>
+            <ul>
+                <li><a href="#">الرئيسية</a></li>
+                <li><a href="#">أفلام</a></li>
+                <li><a href="#">مسلسلات</a></li>
+                <li><a href="#">تواصل معنا</a></li>
+            </ul>
+        </nav>
+
+        <!-- 🔍 SEARCH -->
+        <input type="text" id="searchInput" placeholder="ابحث عن فيلم...">
+    </header>
+
+    <!-- 🧩 CONTAINER -->
+    <div class="container">
+
+        <!-- 📂 SIDEBAR -->
+        <aside class="sidebar">
+
+            <h2>🔥 الأقسام</h2>
+
+            <ul>
+                <li><a href="#" onclick="filterMovies('all')">🎬 الكل</a></li>
+                <li><a href="#" onclick="filterMovies('action')">💥 أكشن</a></li>
+                <li><a href="#" onclick="filterMovies('comedy')">😂 كوميدي</a></li>
+                <li><a href="#" onclick="filterMovies('drama')">💔 دراما</a></li>
+            </ul>
+
+        </aside>
+
+        <!-- 🎥 MOVIES -->
+        <div class="movies" id="moviesContainer">
+
+           <div class="movie" data-category="action">
+    <img src="https://image.tmdb.org/t/p/original/uLhlqWVJhjz8xU1tZp02YkixWGR.jpg">
+    <h3>Extraction</h3>
+</div>
+
+<div class="movie" data-category="action">
+    <img src="https://th.bing.com/th/id/OIP.07ApoNsHUiD_LaKtezPdmAHaLH?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3">
+    <h3>Avengers Endgame</h3>
+</div>
+
+<div class="movie" data-category="action">
+    <img src="https://tse3.mm.bing.net/th/id/OIP.uNQea1Fb1qjTi-u3OiegWQHaK-?pid=ImgDet&w=474&h=702&rs=1&o=7&rm=3">
+    <h3>The Batman</h3>
+</div>
+
+<div class="movie" data-category="drama">
+    <img src="https://vignette.wikia.nocookie.net/elite-netflix/images/2/2c/Season_1_Poster.jpg/revision/latest?cb=20190816175812">
+    <h3>Elite</h3>
+</div>
+
+<div class="movie" data-category="drama">
+    <img src="https://tse2.mm.bing.net/th/id/OIP.D4d76RNSVVnHQEWxGpBFYwHaJ4?rs=1&pid=ImgDetMain&o=7&rm=3">
+    <h3>Money Heist</h3>
+</div>
+
+<div class="movie" data-category="drama">
+    <img src="images/breakingbad.jpg">
+    <h3>Breaking Bad</h3>
+</div>
+
+<div class="movie" data-category="action">
+    <img src="images/rambo.jpg">
+    <h3>Rambo</h3>
+</div>
+
+<div class="movie" data-category="action">
+    <img src="images/rocky.jpg">
+    <h3>Rocky</h3>
+</div>
+
+<div class="movie" data-category="action">
+    <img src="images/300.jpg">
+    <h3>300</h3>
+</div>
+
+<div class="movie" data-category="action">
+    <img src="images/kingsman.jpg">
+    <h3>Kingsman</h3>
+</div>
+
+<div class="movie" data-category="action">
+    <img src="images/nobody.jpg">
+    <h3>Nobody</h3>
+</div>
+            <!-- فيلم 4 -->
+            <div class="movie" data-category="action">
+                <img src="images/johnwick.jpg" alt="John Wick">
+                <h3>John Wick</h3>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 🟨 FOOTER -->
+    <footer>
+        <p>© 2026 جميع الحقوق محفوظة | الحاج مازن</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
